@@ -1,32 +1,109 @@
-/* Swiper Container */
-.swiper {
-  width: 100%;
-  max-width: none;
-  height: auto;
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Reset and Base */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Slides */
-.swiper-slide {
+body {
+  background: linear-gradient(135deg, #a770ef, #cf8bf3, #fdb99b); /* beautiful purple gradient */
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  padding: 40px 20px 10px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Swiper */
+.swiper {
   width: 100%;
-  border-radius: 0; /* remove curve to match full width */
-  background: white;
-  box-shadow: none;
-  padding: 30px 20px;
-  min-height: 65vh;
+  height: auto;
+  margin-top: 30px;
+}
+
+/* Story slides */
+.swiper-slide {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 25px;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  min-height: 65vh;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Optional – add a subtle card look */
-@media (min-width: 768px) {
+.swiper-slide h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.swiper-slide p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  max-width: 500px;
+}
+
+.swiper-slide img {
+  max-width: 80%;
+  border-radius: 15px;
+  margin-top: 20px;
+  object-fit: cover;
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: #f0d9ff;
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
   .swiper-slide {
-    border-radius: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 30px 20px;
+    min-height: 70vh;
+  }
+
+  .swiper-slide h2 {
+    font-size: 1.3rem;
+  }
+
+  .swiper-slide p {
+    font-size: 0.95rem;
   }
 }
